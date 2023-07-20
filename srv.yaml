@@ -1,0 +1,6 @@
+---
+  - hosts: all
+    become: true
+    tasks:
+    - name: create docker container
+      shell: docker run -d --name practice01_container -p 8090:8080 tyson/practice01_demo
